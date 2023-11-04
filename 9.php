@@ -19,6 +19,7 @@ function main() {
 		$ans .= $s[$i];
 		if ($ans === 'dream') {
 			if (isset($s[$i+2]) && $s[$i+1].$s[$i+2] === 'er') {
+				// 「er」が後ろにある場合
 				if (isset($s[$i+5]) && $s[$i+3].$s[$i+4].$s[$i+5] === 'ase') {
 					// 集合論で言う「かつ」の領域
 					// 「または」で条件を分岐できればスマートだったかも？
@@ -32,6 +33,7 @@ function main() {
 			$ans = '';
 		} elseif ($ans === 'erase') {
 			if (isset($s[$i+1]) && $s[$i+1] === 'r') {
+				// 「r」が後ろにある場合
 				$i = $i + 1;
 				$ans .= 'r';
 			}
